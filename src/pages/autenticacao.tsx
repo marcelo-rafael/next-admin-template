@@ -2,8 +2,8 @@ import { useState } from 'react';
 import AuthInput from '../components/auth/AuthInput';
 import { IconeAtencao } from '../components/icons';
 import useAuth from '../data/hook/useAuth';
-// import LogoGoogleImg from '../../public/Google__G__Logo.svg'
-// import Image from 'next/image'
+import Image from 'next/image'
+import CodeImg from '../../public/images/development.jpg'
 
 export default function Autenticacao() {
   const { cadastrar, login, loginGoogle } = useAuth()
@@ -34,8 +34,8 @@ export default function Autenticacao() {
   return (
     <div className='flex h-screen items-center justify-center'>
       <div className='hidden md:block md:w-1/2 lg:w-2/3'>
-        <img
-          src="https://source.unsplash.com/random" 
+        <Image
+          src={CodeImg} 
           alt="Imagem da tela de autenticação"
           className='h-screen w-full object-cover' 
         />
